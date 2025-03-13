@@ -7,7 +7,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 252 100% 98%;
     --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
@@ -16,16 +16,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
 
-    --primary: 220 47% 45%;
+    --primary: 263 84% 74%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary: 263 45% 94%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --muted: 210 40% 96.1%;
+    --muted: 263 45% 94%;
     --muted-foreground: 220 8.9% 46.1%;
 
-    --accent: 220 35% 92%;
+    --accent: 263 45% 94%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -33,7 +33,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222 47% 45%;
+    --ring: 263 84% 74%;
 
     --radius: 0.75rem;
   }
@@ -96,5 +96,9 @@
   
   .text-balance {
     text-wrap: balance;
+  }
+
+  .purple-gradient {
+    @apply bg-gradient-to-br from-purple-light to-purple;
   }
 }

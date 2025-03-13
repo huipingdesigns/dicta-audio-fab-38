@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { Upload, Headphones, FileText, X } from "lucide-react";
+import { Upload, Headphones, ArrowRight, X } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -91,7 +91,7 @@ const TextInput = ({ onTextSubmit }: TextInputProps) => {
                 value={text}
                 onChange={handleTextChange}
                 placeholder="Input or upload your Chinese text here..."
-                className="min-h-[200px] p-4 resize-y bg-white/50 backdrop-blur-sm border-muted focus:border-primary transition-colors"
+                className="min-h-[200px] p-4 resize-y bg-white/50 backdrop-blur-sm border-muted focus:border-purple transition-colors"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               />
               {text && (
@@ -106,44 +106,46 @@ const TextInput = ({ onTextSubmit }: TextInputProps) => {
               )}
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-3 w-full justify-center">
-              <input
-                type="file"
-                ref={fileInputRef}
-                onChange={handleFileUpload}
-                className="hidden"
-                accept=".txt"
-              />
+            <div className="flex flex-col sm:flex-row gap-3 w-full justify-between items-center">
+              <div className="flex gap-3 w-full sm:w-auto">
+                <input
+                  type="file"
+                  ref={fileInputRef}
+                  onChange={handleFileUpload}
+                  className="hidden"
+                  accept=".txt"
+                />
+                
+                <motion.div whileTap={{ scale: 0.97 }} className="w-full sm:w-auto">
+                  <Button
+                    variant="outline" 
+                    onClick={triggerFileUpload}
+                    className="w-full sm:w-auto button-effect flex items-center gap-2"
+                    disabled={isUploading}
+                  >
+                    {isUploading ? (
+                      <div className="flex items-center gap-2">
+                        <div className="h-4 w-4 animate-spin rounded-full border-2 border-purple border-t-transparent" />
+                        <span>Uploading...</span>
+                      </div>
+                    ) : (
+                      <>
+                        <Upload className="h-4 w-4" />
+                        <span>Upload .txt File</span>
+                      </>
+                    )}
+                  </Button>
+                </motion.div>
+              </div>
               
-              <motion.div whileTap={{ scale: 0.97 }}>
-                <Button
-                  variant="outline" 
-                  onClick={triggerFileUpload}
-                  className="w-full sm:w-auto button-effect flex items-center gap-2"
-                  disabled={isUploading}
-                >
-                  {isUploading ? (
-                    <div className="flex items-center gap-2">
-                      <div className="h-4 w-4 animate-spin rounded-full border-2 border-primary border-t-transparent" />
-                      <span>Uploading...</span>
-                    </div>
-                  ) : (
-                    <>
-                      <Upload className="h-4 w-4" />
-                      <span>Upload .txt File</span>
-                    </>
-                  )}
-                </Button>
-              </motion.div>
-              
-              <motion.div whileTap={{ scale: 0.97 }}>
+              <motion.div whileTap={{ scale: 0.97 }} className="w-full sm:w-auto">
                 <Button
                   variant="default"
                   onClick={handleSubmit}
-                  className="w-full sm:w-auto button-effect bg-primary hover:bg-primary/90 flex items-center gap-2"
+                  className="w-full sm:w-auto button-effect bg-purple hover:bg-purple-dark flex items-center gap-2 rounded-full px-6"
                 >
-                  <Headphones className="h-4 w-4" />
-                  <span>Generate Audio</span>
+                  <span>Start</span>
+                  <ArrowRight className="h-4 w-4" />
                 </Button>
               </motion.div>
             </div>

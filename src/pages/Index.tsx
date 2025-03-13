@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useToast } from "@/hooks/use-toast";
@@ -70,7 +71,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col pb-12">
+    <div className="min-h-screen flex flex-col pb-12 bg-purple-light/40">
       <Header />
       
       <main className="flex-1 w-full max-w-5xl mx-auto mt-4 sm:mt-8 flex flex-col">
@@ -85,7 +86,7 @@ const Index = () => {
               exit={{ opacity: 0 }}
             >
               <div className="flex flex-col items-center gap-3">
-                <Loader2 className="h-8 w-8 animate-spin text-primary" />
+                <Loader2 className="h-8 w-8 animate-spin text-purple" />
                 <p className="text-muted-foreground">Generating audio...</p>
               </div>
             </motion.div>
@@ -107,7 +108,7 @@ const Index = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
         >
-          Chinese Dictation Assistant • Web Speech API
+          汉语听写助手 • Chinese Dictation Assistant
         </motion.div>
       </main>
     </div>

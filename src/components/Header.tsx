@@ -1,6 +1,7 @@
 
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
+import { Upload, Share2, Play } from "lucide-react";
 
 const Header = () => {
   return (
@@ -41,19 +42,25 @@ const Header = () => {
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="flex flex-col items-center text-center p-4">
-                  <div className="w-10 h-10 rounded-full bg-purple flex items-center justify-center text-white font-medium mb-4">1</div>
+                  <div className="w-12 h-12 rounded-full bg-purple flex items-center justify-center text-white mb-4">
+                    <Upload size={24} />
+                  </div>
                   <h3 className="font-medium mb-2">Upload or Type</h3>
                   <p className="text-sm text-muted-foreground">Upload an image of your Ting Xie list (or manually key in the words).</p>
                 </div>
                 
                 <div className="flex flex-col items-center text-center p-4">
-                  <div className="w-10 h-10 rounded-full bg-purple flex items-center justify-center text-white font-medium mb-4">2</div>
+                  <div className="w-12 h-12 rounded-full bg-purple flex items-center justify-center text-white mb-4">
+                    <Share2 size={24} />
+                  </div>
                   <h3 className="font-medium mb-2">Select & Share</h3>
                   <p className="text-sm text-muted-foreground">Select your school and level — A shareable link will be generated for your classmates.</p>
                 </div>
                 
                 <div className="flex flex-col items-center text-center p-4">
-                  <div className="w-10 h-10 rounded-full bg-purple flex items-center justify-center text-white font-medium mb-4">3</div>
+                  <div className="w-12 h-12 rounded-full bg-purple flex items-center justify-center text-white mb-4">
+                    <Play size={24} />
+                  </div>
                   <h3 className="font-medium mb-2">Start Testing</h3>
                   <p className="text-sm text-muted-foreground">That's it! Your list is created — just hit the play button to start self-testing.</p>
                 </div>

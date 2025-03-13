@@ -1,7 +1,6 @@
-
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { useToast } from "@/components/ui/toast";
+import { useToast } from "@/hooks/use-toast";
 import Header from "@/components/Header";
 import TextInput from "@/components/TextInput";
 import AudioPlayer from "@/components/AudioPlayer";
@@ -16,7 +15,6 @@ const Index = () => {
   const [voicesLoaded, setVoicesLoaded] = useState(false);
   const { toast } = useToast();
 
-  // Ensure voices are loaded (needed for some browsers)
   useEffect(() => {
     if (typeof window !== "undefined" && window.speechSynthesis) {
       const loadVoices = () => {
@@ -24,10 +22,7 @@ const Index = () => {
         setVoicesLoaded(true);
       };
 
-      // Chrome needs a timeout to properly load voices
       window.speechSynthesis.onvoiceschanged = loadVoices;
-      
-      // For other browsers, try to load immediately
       setTimeout(loadVoices, 100);
       
       return () => {
@@ -40,7 +35,6 @@ const Index = () => {
     try {
       setIsLoading(true);
       
-      // Extract Chinese characters from the text
       const extractedContent = extractChineseContent(text);
       
       if (extractedContent.length === 0) {
@@ -55,7 +49,6 @@ const Index = () => {
       
       setExtractedText(extractedContent);
       
-      // Convert extracted text to speech
       const textToSpeak = extractedContent.join(' ');
       const url = await textToSpeech(textToSpeak);
       setAudioUrl(url);

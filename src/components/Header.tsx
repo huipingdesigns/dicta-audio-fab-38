@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Upload, Share, Play, BookOpen, Clock, Star } from "lucide-react";
 
 const Header = () => {
   return (
@@ -118,7 +119,7 @@ const Header = () => {
                     </div>
                   </div>
                   <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 h-10 w-24 bg-white rounded-md shadow-md flex items-center justify-center">
-                    <Share2 size={18} className="text-purple mr-2" />
+                    <Share size={18} className="text-purple mr-2" />
                     <span className="text-xs font-medium text-purple">Share Link</span>
                   </div>
                 </motion.div>

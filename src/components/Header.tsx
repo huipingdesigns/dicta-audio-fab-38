@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -43,11 +44,11 @@ const Header = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}
             >
-              <span className="font-medium">tīng xiě</span> practice
+              <span className="text-4xl md:text-5xl font-medium">tīng xiě</span> practice
             </motion.h2>
             
             <motion.h3
-              className="text-2xl md:text-3xl font-normal text-gray-700 mb-12"
+              className="text-4xl md:text-5xl font-normal text-gray-700 mb-12"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.5 }}

@@ -42,24 +42,65 @@ const Header = () => {
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="flex flex-col items-center text-center p-4">
-                  <div className="w-12 h-12 rounded-full bg-purple flex items-center justify-center text-white mb-4">
-                    <Upload size={24} />
+                  <div className="w-32 h-32 mb-4 rounded-lg overflow-hidden bg-purple-light/20 flex items-center justify-center p-3">
+                    <motion.div 
+                      className="relative w-full h-full"
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-24 rounded-md border-2 border-dashed border-purple bg-white/80 flex items-center justify-center">
+                        <Upload size={24} className="text-purple" />
+                      </div>
+                      <div className="absolute bottom-0 right-1 w-12 h-12 bg-purple-light rounded-full flex items-center justify-center shadow-md">
+                        <span className="text-white font-medium text-sm">汉字</span>
+                      </div>
+                    </motion.div>
                   </div>
                   <h3 className="font-medium mb-2">Upload or Type</h3>
                   <p className="text-sm text-muted-foreground">Upload an image of your Ting Xie list (or manually key in the words).</p>
                 </div>
                 
                 <div className="flex flex-col items-center text-center p-4">
-                  <div className="w-12 h-12 rounded-full bg-purple flex items-center justify-center text-white mb-4">
-                    <Share2 size={24} />
+                  <div className="w-32 h-32 mb-4 rounded-lg overflow-hidden bg-purple-light/20 flex items-center justify-center p-3">
+                    <motion.div 
+                      className="relative w-full h-full"
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-12 rounded-md bg-white shadow-md flex items-center justify-evenly p-2">
+                        <div className="w-6 h-6 rounded-full bg-purple flex items-center justify-center">
+                          <span className="text-white text-xs font-bold">S</span>
+                        </div>
+                        <div className="w-6 h-6 rounded-full bg-purple-light/50 flex items-center justify-center">
+                          <span className="text-white text-xs font-bold">L</span>
+                        </div>
+                      </div>
+                      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 h-10 w-24 bg-white rounded-md shadow-md flex items-center justify-center">
+                        <Share2 size={18} className="text-purple mr-2" />
+                        <span className="text-xs font-medium text-purple">Share Link</span>
+                      </div>
+                    </motion.div>
                   </div>
                   <h3 className="font-medium mb-2">Select & Share</h3>
                   <p className="text-sm text-muted-foreground">Select your school and level — A shareable link will be generated for your classmates.</p>
                 </div>
                 
                 <div className="flex flex-col items-center text-center p-4">
-                  <div className="w-12 h-12 rounded-full bg-purple flex items-center justify-center text-white mb-4">
-                    <Play size={24} />
+                  <div className="w-32 h-32 mb-4 rounded-lg overflow-hidden bg-purple-light/20 flex items-center justify-center p-3">
+                    <motion.div 
+                      className="relative w-full h-full"
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-md bg-white shadow-md flex flex-col items-center justify-center">
+                        <div className="w-14 h-14 rounded-full bg-purple flex items-center justify-center mb-2">
+                          <Play size={24} fill="white" className="text-white ml-1" />
+                        </div>
+                        <div className="w-16 h-2 bg-gray-200 rounded-full">
+                          <div className="w-10 h-2 bg-purple rounded-full"></div>
+                        </div>
+                      </div>
+                    </motion.div>
                   </div>
                   <h3 className="font-medium mb-2">Start Testing</h3>
                   <p className="text-sm text-muted-foreground">That's it! Your list is created — just hit the play button to start self-testing.</p>

@@ -71,10 +71,10 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col pb-12 bg-purple-light/40">
+    <div className="min-h-screen flex flex-col bg-white">
       <Header />
       
-      <main className="flex-1 w-full max-w-5xl mx-auto mt-4 sm:mt-8 flex flex-col">
+      <main className="flex-1 w-full max-w-5xl mx-auto px-4 flex flex-col">
         <TextInput onTextSubmit={handleTextSubmit} />
         
         <AnimatePresence>

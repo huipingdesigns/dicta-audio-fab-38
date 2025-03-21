@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -159,32 +160,34 @@ const Header = () => {
         transition={{ delay: 0.6, duration: 0.5 }}
       >
         <div className="max-w-7xl mx-auto">
-          <span className="inline-block px-6 py-3 bg-purple/20 rounded-full text-sm font-medium text-purple-dark mb-6">
-            Example
-          </span>
-          
-          <h2 className="text-3xl font-medium mb-10">
-            See how it works in action
-          </h2>
+          <div className="flex flex-col items-center text-center">
+            <span className="inline-block px-6 py-3 bg-purple/20 rounded-full text-sm font-medium text-purple-dark mb-6">
+              Example
+            </span>
+            
+            <h2 className="text-3xl font-medium mb-10">
+              See how it works in action
+            </h2>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="order-2 md:order-1">
               <div className="bg-white rounded-xl p-6 shadow-md">
-                <h3 className="font-medium mb-4 text-lg text-left">Your Ting Xie List</h3>
+                <h3 className="font-medium mb-4 text-lg">Your Ting Xie List</h3>
                 <div className="space-y-4">
-                  <div className="flex items-center space-x-3 text-left">
+                  <div className="flex items-center space-x-3">
                     <div className="rounded-full bg-purple/10 w-8 h-8 flex items-center justify-center text-purple-dark font-medium">1</div>
                     <div className="text-lg">学习 <span className="text-sm text-muted-foreground">(xuéxí - to study)</span></div>
                   </div>
-                  <div className="flex items-center space-x-3 text-left">
+                  <div className="flex items-center space-x-3">
                     <div className="rounded-full bg-purple/10 w-8 h-8 flex items-center justify-center text-purple-dark font-medium">2</div>
                     <div className="text-lg">知识 <span className="text-sm text-muted-foreground">(zhīshi - knowledge)</span></div>
                   </div>
-                  <div className="flex items-center space-x-3 text-left">
+                  <div className="flex items-center space-x-3">
                     <div className="rounded-full bg-purple/10 w-8 h-8 flex items-center justify-center text-purple-dark font-medium">3</div>
                     <div className="text-lg">老师 <span className="text-sm text-muted-foreground">(lǎoshī - teacher)</span></div>
                   </div>
-                  <div className="flex items-center space-x-3 text-left">
+                  <div className="flex items-center space-x-3">
                     <div className="rounded-full bg-purple/10 w-8 h-8 flex items-center justify-center text-purple-dark font-medium">4</div>
                     <div className="text-lg">朋友 <span className="text-sm text-muted-foreground">(péngyou - friend)</span></div>
                   </div>
@@ -194,7 +197,7 @@ const Header = () => {
             
             <div className="order-1 md:order-2 relative">
               <div className="bg-white rounded-xl overflow-hidden shadow-lg">
-                <div className="bg-purple p-4 text-white text-left flex items-center justify-between">
+                <div className="bg-purple p-4 text-white flex items-center justify-between">
                   <h3 className="font-medium">Ting Xie Player</h3>
                   <div className="flex space-x-2">
                     <span className="inline-block w-3 h-3 rounded-full bg-red-400"></span>

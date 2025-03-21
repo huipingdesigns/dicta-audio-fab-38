@@ -39,7 +39,7 @@ const Header = () => {
           
           <div className="relative z-10 flex flex-col items-center justify-center text-center max-w-md mx-auto">
             <motion.h2 
-              className="text-4xl md:text-5xl font-semibold mb-3"
+              className="text-4xl md:text-5xl font-normal mb-3"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}

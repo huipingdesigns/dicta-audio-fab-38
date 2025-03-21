@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -83,7 +82,6 @@ const Header = () => {
             Generate your tīng xiě audio<br />in just three steps
           </h2>
           
-          {/* Content below this will remain the same - the steps explanation */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <div className="flex flex-col items-center text-center p-4">
               <div className="w-32 h-32 mb-4 rounded-lg overflow-hidden bg-purple-light/20 flex items-center justify-center p-3">
@@ -152,6 +150,97 @@ const Header = () => {
           </div>
         </div>
       </div>
+      
+      {/* Example section */}
+      <motion.div 
+        className="w-full px-4 py-16 mt-16 bg-purple-light/30"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.6, duration: 0.5 }}
+      >
+        <div className="max-w-7xl mx-auto">
+          <span className="inline-block px-6 py-3 bg-purple/20 rounded-full text-sm font-medium text-purple-dark mb-6">
+            Example
+          </span>
+          
+          <h2 className="text-3xl font-medium mb-10">
+            See how it works in action
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div className="order-2 md:order-1">
+              <div className="bg-white rounded-xl p-6 shadow-md">
+                <h3 className="font-medium mb-4 text-lg text-left">Your Ting Xie List</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3 text-left">
+                    <div className="rounded-full bg-purple/10 w-8 h-8 flex items-center justify-center text-purple-dark font-medium">1</div>
+                    <div className="text-lg">学习 <span className="text-sm text-muted-foreground">(xuéxí - to study)</span></div>
+                  </div>
+                  <div className="flex items-center space-x-3 text-left">
+                    <div className="rounded-full bg-purple/10 w-8 h-8 flex items-center justify-center text-purple-dark font-medium">2</div>
+                    <div className="text-lg">知识 <span className="text-sm text-muted-foreground">(zhīshi - knowledge)</span></div>
+                  </div>
+                  <div className="flex items-center space-x-3 text-left">
+                    <div className="rounded-full bg-purple/10 w-8 h-8 flex items-center justify-center text-purple-dark font-medium">3</div>
+                    <div className="text-lg">老师 <span className="text-sm text-muted-foreground">(lǎoshī - teacher)</span></div>
+                  </div>
+                  <div className="flex items-center space-x-3 text-left">
+                    <div className="rounded-full bg-purple/10 w-8 h-8 flex items-center justify-center text-purple-dark font-medium">4</div>
+                    <div className="text-lg">朋友 <span className="text-sm text-muted-foreground">(péngyou - friend)</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="order-1 md:order-2 relative">
+              <div className="bg-white rounded-xl overflow-hidden shadow-lg">
+                <div className="bg-purple p-4 text-white text-left flex items-center justify-between">
+                  <h3 className="font-medium">Ting Xie Player</h3>
+                  <div className="flex space-x-2">
+                    <span className="inline-block w-3 h-3 rounded-full bg-red-400"></span>
+                    <span className="inline-block w-3 h-3 rounded-full bg-yellow-400"></span>
+                    <span className="inline-block w-3 h-3 rounded-full bg-green-400"></span>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <div className="rounded-lg bg-purple-light/30 p-4 mb-6 text-center">
+                    <p className="text-xl mb-2">学习</p>
+                    <p className="text-sm text-muted-foreground">xuéxí - to study</p>
+                  </div>
+                  
+                  <div className="flex items-center justify-center space-x-6 mb-6">
+                    <button className="w-12 h-12 rounded-full bg-purple flex items-center justify-center shadow-md">
+                      <Play size={24} className="text-white ml-1" />
+                    </button>
+                    <div className="text-sm text-muted-foreground">
+                      Word 1 of 4
+                    </div>
+                  </div>
+                  
+                  <div className="w-full bg-gray-200 rounded-full h-2.5 mb-8">
+                    <div className="bg-purple h-2.5 rounded-full w-1/4"></div>
+                  </div>
+                  
+                  <div className="text-center">
+                    <p className="text-sm text-muted-foreground">Listen carefully and write the character</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="hidden md:block absolute left-0 top-1/2 transform -translate-x-full -translate-y-1/2">
+                <svg width="100" height="20" className="text-purple">
+                  <path d="M0 10 L90 10 L80 5 L90 10 L80 15" stroke="currentColor" strokeWidth="2" fill="none" />
+                </svg>
+              </div>
+              <div className="block md:hidden absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-full rotate-90">
+                <svg width="60" height="20" className="text-purple">
+                  <path d="M0 10 L50 10 L40 5 L50 10 L40 15" stroke="currentColor" strokeWidth="2" fill="none" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
       
       {/* Why Use Ting Xie section */}
       <motion.div

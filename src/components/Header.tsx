@@ -1,8 +1,7 @@
-
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Upload, Share, Play, BookOpen, Clock, Star } from "lucide-react";
+import { Upload, Share, Play, BookOpen, Clock } from "lucide-react";
 
 const Header = () => {
   return (
@@ -252,9 +251,17 @@ const Header = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8, duration: 0.5 }}
       >
-        <h2 className="text-2xl font-medium text-foreground mb-8">Why Use Ting Xie?</h2>
+        <div className="flex flex-col items-center text-center">
+          <span className="inline-block px-6 py-3 bg-purple/20 rounded-full text-sm font-medium text-purple-dark mb-6">
+            Benefits
+          </span>
+          
+          <h2 className="text-3xl font-medium mb-10">
+            Why Use Ting Xie?
+          </h2>
+        </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <motion.div 
             className="bg-gradient-to-br from-purple-light/30 to-purple/20 backdrop-blur-sm p-6 rounded-xl border border-purple/20 shadow-sm hover:shadow-md transition-all"
             whileHover={{ y: -5, transition: { duration: 0.2 } }}
@@ -264,8 +271,8 @@ const Header = () => {
                 <BookOpen size={26} />
               </div>
               <div className="text-left">
-                <h3 className="font-medium text-lg mb-2">Effective Learning</h3>
-                <p className="text-sm text-muted-foreground">Improve character recognition and writing through active listening and recall — a proven technique for language mastery.</p>
+                <h3 className="font-medium text-lg mb-2">Self-Test Anytime</h3>
+                <p className="text-sm text-muted-foreground">Practice Chinese character writing at your own pace and convenience — no need to rely on others for dictation sessions.</p>
               </div>
             </div>
           </motion.div>
@@ -279,23 +286,8 @@ const Header = () => {
                 <Clock size={26} />
               </div>
               <div className="text-left">
-                <h3 className="font-medium text-lg mb-2">Time-Saving</h3>
-                <p className="text-sm text-muted-foreground">No more manual dictation — our tool automates the process so students can practice independently at their own pace.</p>
-              </div>
-            </div>
-          </motion.div>
-          
-          <motion.div 
-            className="bg-gradient-to-br from-purple-light/30 to-purple/20 backdrop-blur-sm p-6 rounded-xl border border-purple/20 shadow-sm hover:shadow-md transition-all"
-            whileHover={{ y: -5, transition: { duration: 0.2 } }}
-          >
-            <div className="flex items-start gap-4">
-              <div className="shrink-0 bg-purple/10 rounded-lg p-3 text-purple-dark">
-                <Star size={26} />
-              </div>
-              <div className="text-left">
-                <h3 className="font-medium text-lg mb-2">Track Progress</h3>
-                <p className="text-sm text-muted-foreground">Monitor learning progress over time with detailed performance stats and identify areas that need more practice.</p>
+                <h3 className="font-medium text-lg mb-2">No Language Barrier</h3>
+                <p className="text-sm text-muted-foreground">Perfect for non-native speakers or parents who want to help their children practice Chinese characters without pronunciation difficulties.</p>
               </div>
             </div>
           </motion.div>

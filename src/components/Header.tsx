@@ -1,7 +1,8 @@
+
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Upload, Share, Play, BookOpen, Clock } from "lucide-react";
+import { Upload, Share, Play, BookOpen, Languages } from "lucide-react";
 
 const Header = () => {
   return (
@@ -283,7 +284,7 @@ const Header = () => {
           >
             <div className="flex items-start gap-4">
               <div className="shrink-0 bg-purple/10 rounded-lg p-3 text-purple-dark">
-                <Clock size={26} />
+                <Languages size={26} />
               </div>
               <div className="text-left">
                 <h3 className="font-medium text-lg mb-2">No Language Barrier</h3>
@@ -291,6 +292,39 @@ const Header = () => {
               </div>
             </div>
           </motion.div>
+        </div>
+      </motion.div>
+      
+      {/* Join our community section */}
+      <motion.div 
+        className="w-full px-4 py-16 mt-16 bg-purple-light/30"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.6, duration: 0.5 }}
+      >
+        <div className="max-w-3xl mx-auto flex flex-col items-center text-center">
+          <span className="inline-block px-6 py-3 bg-purple/20 rounded-full text-sm font-medium text-purple-dark mb-6">
+            Community
+          </span>
+          
+          <h2 className="text-3xl font-medium mb-8">
+            Join Our Community
+          </h2>
+          
+          <p className="text-muted-foreground mb-10 max-w-lg">
+            Connect with fellow language learners, share your progress, and get exclusive updates on new features and resources.
+          </p>
+          
+          <Button 
+            className="bg-purple hover:bg-purple-dark text-white px-8 py-6 rounded-full text-lg group transition-all"
+            size="lg"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 mr-2 group-hover:translate-x-[-2px] transition-transform">
+              <path d="M15 10l5 5-5 5" />
+              <path d="M4 4v7a4 4 0 0 0 4 4h12" />
+            </svg>
+            Telegram Channel
+          </Button>
         </div>
       </motion.div>
     </div>

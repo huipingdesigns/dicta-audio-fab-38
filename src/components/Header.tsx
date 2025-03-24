@@ -171,7 +171,7 @@ const Header = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            <div className="order-2 md:order-1">
+            <div className="order-1 md:order-1">
               <div className="bg-white rounded-xl p-6 shadow-md">
                 <h3 className="font-medium mb-4 text-lg">Your Ting Xie List</h3>
                 <div className="space-y-4">
@@ -195,7 +195,7 @@ const Header = () => {
               </div>
             </div>
             
-            <div className="order-1 md:order-2 relative">
+            <div className="order-2 md:order-2 relative">
               <div className="bg-white rounded-xl overflow-hidden shadow-lg">
                 <div className="bg-purple p-4 text-white flex items-center justify-between">
                   <h3 className="font-medium">Ting Xie Player</h3>
